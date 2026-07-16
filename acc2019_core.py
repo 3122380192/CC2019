@@ -981,21 +981,26 @@ class AdobeManagerApp:
         self.console.tag_config("accent", foreground=COLOR_ACCENT_PS)
 
     def check_installer_files(self):
+        btn_ps = getattr(self, "btn_install_ps", None)
+        btn_ai = getattr(self, "btn_install_ai", None)
+
         if os.path.exists(self.ps_installer):
             self.log("Tìm thấy bộ cài Photoshop.")
-            if not self.is_ps_installed and not self.installing_ps:
-                self.btn_install_ps.config(state=tk.NORMAL)
+            if btn_ps and not self.is_ps_installed and not self.installing_ps:
+                btn_ps.config(state=tk.NORMAL)
         else:
             self.log(f"LƯU Ý: Thiếu bộ cài Photoshop. (Đang tìm: {self.ps_installer})")
-            self.btn_install_ps.config(state=tk.DISABLED)
+            if btn_ps:
+                btn_ps.config(state=tk.DISABLED)
 
         if os.path.exists(self.ai_installer):
             self.log("Tìm thấy bộ cài Illustrator.")
-            if not self.is_ai_installed and not self.installing_ai:
-                self.btn_install_ai.config(state=tk.NORMAL)
+            if btn_ai and not self.is_ai_installed and not self.installing_ai:
+                btn_ai.config(state=tk.NORMAL)
         else:
             self.log(f"LƯU Ý: Thiếu bộ cài Illustrator. (Đang tìm: {self.ai_installer})")
-            self.btn_install_ai.config(state=tk.DISABLED)
+            if btn_ai:
+                btn_ai.config(state=tk.DISABLED)
 
     def status_monitor_loop(self):
         """Monitors install status on disk and process state in the background."""
@@ -1032,6 +1037,9 @@ class AdobeManagerApp:
             time.sleep(1.0)
 
     def update_ps_ui(self):
+        # Tab Adobe lazy-load — widget chưa tạo thì bỏ qua (build tab sẽ gọi lại)
+        if not getattr(self, "ps_status_label", None):
+            return
         if self.ps_action_type is not None:
             return
 
@@ -1040,7 +1048,8 @@ class AdobeManagerApp:
             if not self.installing_ps:
                 self.btn_install_ps.config(state=tk.DISABLED)
                 self.btn_uninstall_ps.config(state=tk.NORMAL)
-                self.btn_import_ps.config(state=tk.NORMAL)
+                if getattr(self, "btn_import_ps", None):
+                    self.btn_import_ps.config(state=tk.NORMAL)
                 if self.is_ps_running:
                     self.btn_open_ps.config(text="Đóng", fg=COLOR_DANGER)
                 else:
@@ -1054,9 +1063,12 @@ class AdobeManagerApp:
                 self.btn_uninstall_ps.config(state=tk.DISABLED)
                 self.btn_open_ps.config(text="Mở", fg=COLOR_TEXT)
                 self.btn_open_ps.config(state=tk.DISABLED)
-                self.btn_import_ps.config(state=tk.DISABLED)
+                if getattr(self, "btn_import_ps", None):
+                    self.btn_import_ps.config(state=tk.DISABLED)
 
     def update_ai_ui(self):
+        if not getattr(self, "ai_status_label", None):
+            return
         if self.ai_action_type is not None:
             return
 
@@ -1080,6 +1092,8 @@ class AdobeManagerApp:
                 self.btn_open_ai.config(state=tk.DISABLED)
 
     def set_ps_progress(self, percent):
+        if not getattr(self, "ps_progress_canvas", None):
+            return
         width = self.ps_progress_canvas.winfo_width()
         if width <= 1:
             width = 380
@@ -1091,6 +1105,8 @@ class AdobeManagerApp:
             self.ps_status_label.config(text=f"ĐANG GỠ BỎ... {percent}%", fg=COLOR_DANGER)
 
     def set_ai_progress(self, percent):
+        if not getattr(self, "ai_progress_canvas", None):
+            return
         width = self.ai_progress_canvas.winfo_width()
         if width <= 1:
             width = 380
