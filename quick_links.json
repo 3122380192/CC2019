@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "id": "chung",
+      "name": "Chung",
+      "color": "#00d2ff",
+      "collapsed": false,
+      "links": [
+        {
+          "name": "GodGroup Portal",
+          "url": "https://portal.godgroup.com/"
+        },
+        {
+          "name": "Chest EMB",
+          "url": "https://portal.godgroup.com/embroidery"
+        },
+        {
+          "name": "Loki CSV",
+          "url": "https://loki.godgroup.com/"
+        },
+        {
+          "name": "Wilcom",
+          "url": "https://www.wilcom.com/"
+        },
+        {
+          "name": "Google Drive",
+          "url": "https://drive.google.com/"
+        },
+        {
+          "name": "Gmail",
+          "url": "https://mail.google.com/"
+        }
+      ]
+    }
+  ]
+}

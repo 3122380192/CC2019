@@ -1,0 +1,7 @@
+=== HƯỚNG DẪN NHẬP ACTIONS & SCRIPTS TỰ ĐỘNG ===
+
+1. Hãy copy các file Actions (.atn) của bạn vào thư mục 'Actions'.
+2. Hãy copy các file Scripts (.jsx hoặc .js) của bạn vào thư mục 'Scripts'.
+3. Nhấn nút 'Nhập Actions/Scripts ⚡' trên giao diện phần mềm.
+
+Phần mềm sẽ tự động copy toàn bộ vào thư mục cài đặt của Photoshop và tự động mở Photoshop để nạp (load) các Actions này vào bảng điều khiển Actions của bạn.

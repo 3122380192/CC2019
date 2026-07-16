@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+.env
+*.log
+
+# Build / packaging
+build/
+dist/
+*.spec.bak
+*.exe
+
+# Local runtime / cache
+music_cache/
+chat_received/
+*.tmp
+.ocr_clipboard.png
+_ocr_clipboard.png
+
+# Personal / machine-local state
+acc2019_history.txt
+adobe_history.txt
+acc2019_window.json
+chat_lan_history.json
+game_live_history.json
+game_profile.json
+emb_pins.json
+music_playlist.json
+tools_notes.json
+tools_order_checklists.json
+csv_reader/emb_daily_stats.json
+
+# Secrets / local tokens (keep examples only)
+telegram_config.json
+
+# Huge third-party installers (never commit)
+Adobe*/
+wilcome*/
+*.zip
+*.7z
+*.rar
+*.iso
+*.msi
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PyInstaller leftovers
+warn-*.txt
+xref-*.html

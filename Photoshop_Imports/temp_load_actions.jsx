@@ -1,0 +1,1 @@
+try { app.load(new File("C:/Program Files/Adobe/Adobe Photoshop CC 2019/Presets/Actions/pet.atn")); } catch(e) {}

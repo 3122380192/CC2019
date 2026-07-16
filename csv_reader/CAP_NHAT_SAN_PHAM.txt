@@ -1,0 +1,24 @@
+=== HUONG DAN CAP NHAT SAN PHAM CSV LOKI ===
+
+FILE CHINH (app doc file nay khi chay):
+  E:\active\csv_reader\products_config.json
+
+  - Sua truc tiep bang Notepad / VS Code
+  - Trong app: tab CSV Loki -> nut "Sua JSON" hoac "Tai lai"
+  - Moi san pham gom: id, name, columns, note, sp_product, product_codes
+
+FILE DANH SACH LOKI DAY DU (tham khao):
+  E:\active\csv_reader\loki_products.json
+
+FILE RAW (import tu Loki tool.html):
+  E:\active\csv_reader\loki_products_raw.json
+
+CAP NHAT TU LOKI GOC (E:\Loki\tool.html):
+  cd E:\active
+  python -m csv_reader.tools.import_loki
+
+  Lenh tren se cap nhat raw + products_config.json tu tool Loki.
+
+SAU KHI SUA JSON:
+  - Trong app nhan "Tai lai" (tab CSV Loki)
+  - Hoac khoi dong lai ACC2019

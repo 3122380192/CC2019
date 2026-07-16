@@ -1,0 +1,42 @@
+{
+  "active_profile": "Mặc định",
+  "profiles": {
+    "Mặc định": {
+      "input_folder": "E:/Loki/output/pet",
+      "output_folder": "E:/Loki/output/pet",
+      "action_type": "pack_left_match",
+      "pack_extensions": [
+        "jpg",
+        "png",
+        "tif",
+        "jpeg",
+        "tiff"
+      ],
+      "ps_extensions": [
+        "png"
+      ],
+      "pack_custom_extensions": "",
+      "selected_files": [],
+      "pack_file_mode": "all",
+      "match_prefix_length": 6,
+      "match_keyword": "",
+      "name_list": "",
+      "zip_name": "",
+      "delete_after_packaging": true,
+      "delete_source_folder_after_packaging": false,
+      "auto_backup_before_delete": true,
+      "backup_folder": "",
+      "auto_pack_after_action": false,
+      "use_daily_folder": true,
+      "product_subfolder": "Print",
+      "product_name": "",
+      "open_after_pack": true,
+      "note": "",
+      "ps_script": "DomMauW1.jsx",
+      "ps_action_set": "",
+      "ps_action_name": "",
+      "detect_keywords": "",
+      "detect_column": "B"
+    }
+  }
+}
