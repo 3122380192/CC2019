@@ -53,7 +53,7 @@ from modules.registry import (
 )
 
 APP_NAME = "ACC2019"
-VERSION = "3.6.1"
+VERSION = "3.6.2"
 CONSOLE_H = 2
 DXF_MIN_MATCH = 95.0
 

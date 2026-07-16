@@ -2,7 +2,7 @@
 
 Hub desktop **Adobe CC 2019 + sản xuất emb/patch/DXF** (tkinter).
 
-Tên repo: **CC2019** · App: ACC2019 v3.6.1
+Tên repo: **CC2019** · App: ACC2019 v3.6.2
 
 ## Tính năng chính
 
